@@ -20,3 +20,9 @@ It was a movie that sparked my young brain a churning, that movie being The Soci
 Except now I'm professionally employed and work full time in VSCode... **_fuck._**
 
 ## VSCode - The Good, The Bad, And The 90% Memory Usage?!?
+
+![](https://img.devrant.com/devrant/rant/r_2242847_97FQE.jpg)
+
+I want to clarify something really quick here before we move on with my rant. It's important for me to say this now, before I start bashing VSCode (and thus drawing the VSCode Fanbois), and that's that I absolutely **_ADORE_** Visual Studio Code as a text editor for just about anything you need to edit... On Windows that is. Linux is another story, but we can get to that later. If you're on Windows and you need a text editor or IDE for just about any modern programming language under the sun, VSCode not only has you covered, but most likely has either First Class support for your language, or a dedicated community that supports your language in VSCode. So yeah, don't go off on me like I'm saying I hate VSCode and everything it stands for. That couldn't be further from the truth. In fact, the only reason I'm writing this post at all is because I work inside VSCode for 8++ hours a day most days a week. It's a rant of love... and annoyance.
+
+My first foray into the wide world of VSC was when I was about 16-17 years old. I had been using everything from Sublime to Atom to straight VS at the time, finding them all serviceable depending on what kind of Project I had in mind. Obviously Atom and Sublime are much more generic than VS, so I'd use those two pretty interchangeably when working on projects that don't directly require Visual Studio in order to build. Eventually I began using Atom more often, almost leaving sublime behind in favor of the other annoying web based text editor.
