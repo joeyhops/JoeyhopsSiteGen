@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: content/showcase.md
+  path: content/showcase
   label: Showcase
   match: "**/*"
 - type: directory
