@@ -4,12 +4,12 @@ date = 2020-08-03T07:00:00Z
 description = "Here's a list of the projects that make me proud as a dev"
 draft = true
 tags = ["tech", "programming", "work", "showcase"]
-title = "My Work"
+title = "Showcase"
 
 +++
 # Projects
 
-### [Sinix](github.com/joeyhops/sinix) - C++, ASM
+### [Sinix](https://github.com/joeyhops/sinix) - C++, ASM
 
 ![](/sinix.png)
 
@@ -21,7 +21,7 @@ Lately I haven't had the opportunity to poke at it as much as I'd like. Not to m
 
 This one is a beast and, frankly, a poorly designed one at that. Looking back, I was still fairly new to C++ when I started building this, mostly as a way to help me learn and practice C++. Eventually however, new features became harder and harder to implement, and I started spending less and less time working on the really "neat" features I was originally so gung-ho to implement. As of now, I haven't pushed an update to this in a good little while, rather unfortunately because I decided to take a break. Now I can't remember what I was implementing originally. I'll probably start a Haven4 sooner rather than later, or possibly Raven (In Rust). Not sure though, this was still really fun to work on either way, and I'll always be on the lookout for the next memory-efficient lightweight text editor to replace VSCode with.
 
-### [Haven](github.com/joeyhops/haven) - C
+### [Haven](https://github.com/joeyhops/haven) - C
 
 ![](/haven.png)
 
@@ -29,7 +29,7 @@ The original Haven text editor, the start of my obsession with building a Text E
 
 Okay, that's an over exaggeration, but only a tad. My frustrations with modern text editors run deep. That's why Haven was such a fascinating project to me. Coming from a Unix/Linux background with a love of the Vi(m) editor, creating a console based editor for the modern age seemed like a no-brainer. Unfortunately, as this was quite literally one of the first times I had ever written C code myself, it was inevitably a lot harder than I originally imagined. Which is why I eventually created the various offshoots, Haven2 (unpublished), and eventually Haven3 which bears absolutely no resemblance to either Haven or Haven2. Funny how that happens eh?
 
-### [Bunder](github.com/joeyhops/bunder) - Javascript (CLI)
+### [Bunder](https://github.com/joeyhops/bunder) - Javascript (CLI)
 
 ![](/bunder.PNG)
 
@@ -43,7 +43,7 @@ If I had to implement it again, which I might you never know, I'd probably make 
 
 As a _professional_ software engineer, I'd be remiss if I didn't share some of the professional work I've done as well. Unfortunately, as these projects are indeed proprietary I cannot provide the code for them.
 
-### [PALMS](transmountain.com) - Sharepoint, Typescript, React
+### [PALMS](https://transmountain.com) - Sharepoint, Typescript, React
 
 _For Trans Mountain_
 
@@ -51,7 +51,7 @@ _For Trans Mountain_
 
 Easily the biggest project I've ever worked on, professionally or otherwise. What started as a relatively standard Sharepoint Migration project for TM rapidly turned into us building what would, very _very_ quickly become the source of truth for just about all the Compliance data within Trans Mountain. Written as a modern Sharepoint Webpart in React and Typescript, we basically turn Sharepoint into a bloated DAL, allowing us to run complex operations and algorithms in order to generate reports, data, and compliance audits required for the Construction of the Pipeline. While I can't take credit for writing the entirety of this system, I can take credit for writing 1/3 of it!
 
-### [RewardBank](rewardbank.ca) - Javascript, React, Redux, PostgreSQL
+### [RewardBank](https://rewardbank.ca) - Javascript, React, Redux, PostgreSQL
 
 _Former Project Lead_
 
@@ -61,4 +61,4 @@ RewardBank is a subsidiary of RMG (Retail Media Group) that acts primarily as an
 
 The RewardBank project itself was a doozy for sure, written in just over a year by two colleagues of mine, and ported from a custom solution built on an Ancient ruby web framework known as Ruby Ramaze, the project was simultaneously utterly incredible in it's design, and also horribly flawed.
 
-My biggest claim to fame on this project, despite having implemented countless features and bugfixes, is the time I managed to find and remedy a massive memory leak that had been causing Gigabyte large jumps in memory throughout the applications lifecycle. I spent three days in my office glued to the computer screen, staring at heat maps and call hierarchies pixel by pixel to track down what was causing the leak. Ultimately I managed to implement a fix (which was, unfortunately, only a few dozen lines or so) that cut the processes memory in half, allowing the server to stay on longer without needed to be turned over. 
+My biggest claim to fame on this project, despite having implemented countless features and bugfixes, is the time I managed to find and remedy a massive memory leak that had been causing Gigabyte large jumps in memory throughout the applications lifecycle. I spent three days in my office glued to the computer screen, staring at heat maps and call hierarchies pixel by pixel to track down what was causing the leak. Ultimately I managed to implement a fix (which was, unfortunately, only a few dozen lines or so) that cut the processes memory in half, allowing the server to stay on longer without needed to be turned over.
