@@ -18,4 +18,4 @@ fields:
   name: categories
   label: categories
 pages:
-- content/my-work.md
+- content/showcase.md
