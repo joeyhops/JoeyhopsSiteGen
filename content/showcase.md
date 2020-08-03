@@ -2,7 +2,6 @@
 categories = ["Meta"]
 date = 2020-08-03T07:00:00Z
 description = "Here's a list of the projects that make me proud as a dev"
-draft = true
 tags = ["tech", "programming", "work", "showcase"]
 title = "Showcase"
 
