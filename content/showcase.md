@@ -16,11 +16,19 @@ As I've mentioned previously on here, I work full time as a developer for a soft
 
 GitPorts is a CLI tool that allows a project manager/quality analyst/business analyst/whom-ever else might need it to quickly generate a filtered report of the issues currently open and closed in a GitHub repository. Leveraging the use of personal OAuth tokens and the GitHub REST API, GitPorts is able to generate a beautifully formatted report detailing our Github issues including who's working on what, the current tags attached to the issue, and even the person who opened the issue. Using the built in flags, a user can filter issues based on the issue owner and the tags currently attached to the issue in GitHub (though more expansive filters are planned in the future), allowing fine-tuned reporting of issues from Github.
 
-GitPorts Report Example:
+#### GitPorts Report Example:
 
 ![](/gitportsreport.PNG)
 
 ### [GitPorts-GUI](https://github.com/wilesjackson/gitports-gui) - Python
+
+![](/gitportsgui.PNG)
+
+Writing a CLI tool to generate a report from GitHub is all well and good, and works rather well for the given use case, however for people with little-to-no technical/development experience (i.e. The people who actually need this tool) using a CLI tool tends to leave them feeling rather nervous. Because of this, I wanted to build something that could conceivably be used by the non-development members of my team at work, as they're the ones who would need to generate the report regardless.
+
+Once I had the CLI tool working to a certain standard, I began looking at ways to take the process from the command line to the desktop. Using python, I was able to leverage the ArgParser library to create what is, essentially, a simple GUI shell around the CLI application. The GUI encapsulates all variables, flags, and even setup/installation/configuration processes from the CLI, allowing the user to have a seamless GUI experience without the overhead of having to write a fully graphical implementation of GitPorts.
+
+Since writing GitPorts & GitPorts-GUI it has become the primary issue-reporting utility for my team. 
 
 ### [Sinix](https://github.com/joeyhops/sinix) - C++, ASM
 
