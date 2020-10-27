@@ -8,6 +8,20 @@ title = "Showcase"
 +++
 # Projects
 
+### [GitPorts](https://github.com/wilesjackson/gitports "GitPorts") - Typescript
+
+![](/gitportscli.PNG)
+
+As I've mentioned previously on here, I work full time as a developer for a software studio building solutions for (primarily, though not exclusively) oil & gas companies here in Alberta. The main project my team and I work on is version controlled and source controlled using Git and GitHub. Because this project is specific to our client, the code, documentation, and issue tracking are all hosted primarily in a private GitHub repo that our development team has access to. Unfortunately, the client we're doing work for has demanded reports detailing the issues currently active, in progress, completed, etc. as well as details such as who's working on the issue, time frames, etc. All of which are inaccessible to our client due to the private repository. Queue GitPorts.
+
+GitPorts is a CLI tool that allows a project manager/quality analyst/business analyst/whom-ever else might need it to quickly generate a filtered report of the issues currently open and closed in a GitHub repository. Leveraging the use of personal OAuth tokens and the GitHub REST API, GitPorts is able to generate a beautifully formatted report detailing our Github issues including who's working on what, the current tags attached to the issue, and even the person who opened the issue. Using the built in flags, a user can filter issues based on the issue owner and the tags currently attached to the issue in GitHub (though more expansive filters are planned in the future), allowing fine-tuned reporting of issues from Github.
+
+GitPorts Report Example:
+
+![](/gitportsreport.PNG)
+
+### [GitPorts-GUI](https://github.com/wilesjackson/gitports-gui) - Python
+
 ### [Sinix](https://github.com/joeyhops/sinix) - C++, ASM
 
 ![](/sinix.png)
