@@ -1,6 +1,6 @@
 +++
 categories = ["Meta"]
-date = 2020-08-03T07:00:00Z
+date = 2020-10-28T00:00:00Z
 description = "Here's a list of the projects that make me proud as a dev"
 tags = ["tech", "programming", "work", "showcase"]
 title = "Showcase"
