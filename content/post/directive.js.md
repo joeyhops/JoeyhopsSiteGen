@@ -35,4 +35,54 @@ The above would "DEFINE" the identifier "EXAMPLE" with the value "My Example Var
     *SOURCE CODE HERE*
     //# endif
 
-Combined with the above directive (assuming the scope is correct, more on that later), the preprocessor would check to see if the identifier "EXAMPLE" has a defined value. If it does, the preprocessor will transform the source code to ensure the code BELOW the conditional directive (ifdef in this example) UP TO the end directive (endif in this example) is INCLUDED in the transformed file. Otherwise, if the condition is FALSE (EXAMPLE is undefined)
+Combined with the above directive (assuming the scope is correct, more on that later), the preprocessor would check to see if the identifier "EXAMPLE" has a defined value. If it does, the preprocessor will transform the source code to ensure the code BELOW the conditional directive (ifdef in this example) UP TO the end directive (endif in this example) is INCLUDED in the transformed file. Otherwise, if the condition is FALSE (EXAMPLE is undefined) the code in-between the directive and the end-directive is excluded from the transformed file.
+
+From this starting point, I began tossing the idea of a TS/JS Preprocessor around in my mind, thinking about the various uses of such a tool. Eventually I expanded the idea of a preprocessor past the basics of the C-Preprocessor.
+
+## The Concept Of Scope
+
+![](https://cdn-media-1.freecodecamp.org/images/1*lskdwh7Th3ug538lVYUscQ.png)
+
+The most interesting feature, I believe, that Directive.js has over the C-Preprocessor, is the concept of "Directive Scope". "Directive Scope" Refers the environment and state of the running preprocessor as it modifies the files. One of the primary uses of the C-Preprocessor is to define constants, values with a static unchanging value accessible as a Macro to C programs that include the file the defined the constant.
+
+Example:
+
+     #define EXAMPLE 10
+
+Assuming the above example is located in a file named 'constants.h', any C file that includes the 'constants.h' file has access to the EXAMPLE constant and value.
+
+Directive.js has a similar system, having two Scope objects that hold the data and variables defined using directives. Where Directive and C differ, however, is in Directives use of Scope levels. Directive has two levels of Scope at any given point during the processing stage. These two levels are:
+
+* Local Scope
+* Global Scope
+
+With each level having different rules regarding access.
+
+### Local Scope - Per File Definitions
+
+![](https://images.code.org/76e9fc4059384cca87c45b7e3647ae59-image-1446407129001.png)
+
+A Scope object, at it's heart, is a simple JS object that holds Key-Value pairs for variables defined by directives. These variables can be used by other Directives to control the transformation and output of preprocessed source files. Local Scope holds variables temporarily when parsing/transforming a file, clearing it when a new file is staged for processing. Variables defined in Local Scope are seen only by the directives in the current file, and functionally no longer exist once that file has been processed.
+
+Most Directive variables will work using Local scope, however if a more persistent solution is required;
+
+### Global Scope - Global Variables & Values
+
+![](https://images.code.org/ac720d8ae4d6380fc72c8d6659910bcf-image-1446407286955.png)
+
+The Global Scope is where things get particularly interesting. Not only are Directive variables defined globally accessible to ALL files being processed by Directive, but Global variables can also be accessed directly in-source without using a directive. By including the GlobalScope library in their project, a user can call out to the preprocessor at processing time, accessing variables defined globally in the directives, the values of which are replaced during the transformation stage and outputted as standard JS values for compilation.
+
+Scope values are limited to the following types (for both Local and Global Scope values):
+
+* Strings
+* Numbers
+* Booleans
+* JSON Objects
+
+The final being a rather peculiar feature of Directive.js.
+
+## Object In Scope - JSON Headers
+
+![](https://d2tlksottdg9m1.cloudfront.net/uploads/2019/02/JSONSample.jpg)
+
+While the concept of having a file-independent object of Keys/Values to use globally in your directives and source is pretty neat, having it limited to Strings, Numbers, and Bools would be kind of lame. That's when I had the idea of directive that would take and parse a JSON file, injecting the entire object into the Global Scope object along with all it's values and sub-objects. This allows users to easily include JSON files in their project for configuration, state management, etc. entirely globally without the compiler ever seeing the JSON file. The object is injected directly into the source on output if the entire object is required, otherwise, during the transform phase of the directive, the value of the global object being referred to is replaced with the value directly, allowing for conditional logic and value manipulation without ever including unused fields/values in the final build. 
