@@ -1,10 +1,10 @@
 +++
-categories = ["Programming", "DevLogs"]
+categories = ["Directive.js", "Programming"]
 date = 2020-10-27T19:42:00Z
-description = "DevLog For Directive.js - Day 1"
+description = "Directive.js Introduction"
 draft = true
 tags = ["javascript", "side-project", "preprocessor", "typescript", "js", "directive"]
-title = "Directive.js"
+title = "Introducing Directive.js"
 
 +++
 # Introducing Directive.JS
@@ -85,4 +85,35 @@ The final being a rather peculiar feature of Directive.js.
 
 ![](https://d2tlksottdg9m1.cloudfront.net/uploads/2019/02/JSONSample.jpg)
 
-While the concept of having a file-independent object of Keys/Values to use globally in your directives and source is pretty neat, having it limited to Strings, Numbers, and Bools would be kind of lame. That's when I had the idea of directive that would take and parse a JSON file, injecting the entire object into the Global Scope object along with all it's values and sub-objects. This allows users to easily include JSON files in their project for configuration, state management, etc. entirely globally without the compiler ever seeing the JSON file. The object is injected directly into the source on output if the entire object is required, otherwise, during the transform phase of the directive, the value of the global object being referred to is replaced with the value directly, allowing for conditional logic and value manipulation without ever including unused fields/values in the final build. 
+While the concept of having a file-independent object of Keys/Values to use globally in your directives and source is pretty neat, having it limited to Strings, Numbers, and Bools would be kind of lame. That's when I had the idea of directive that would take and parse a JSON file, injecting the entire object into the Global Scope object along with all it's values and sub-objects. This allows users to easily include JSON files in their project for configuration, state management, etc. entirely globally without the compiler ever seeing the JSON file. The object is injected directly into the source on output if the entire object is required, otherwise, during the transform phase of the directive, the value of the global object being referred to is replaced with the value directly, allowing for conditional logic and value manipulation without ever including unused fields/values in the final build.
+
+## Directive.js Is In Development
+
+Honestly, I have no idea if this is actually useful. The original idea stemmed from my own personal desire to be able to conditionally include/exclude code snippets using a simple syntax similar to the C-Preprocessor. Expanding on this idea, I took the concept of DocComments (Comments that use specific notation to generate project documentation based on code comments) and with a little bit of personal flair, came up with the idea for Directive.js. The concept for Scope grew naturally out of a need to manage the data being defined, accessed, and manipulated by directives, with the idea for a GlobalScope of variables that exists outside of the raw source code following directly from that base idea. Either way, it's an interesting idea and something I would most certainly (at least try to) use personally, and it's for that reason that I'm currently in the process of writing V0.0.1 of Directive.js.
+
+Currently, I have a few things on my TODO list that I consider "MVP" for Directive:
+
+* Working Scope
+  * Local Scope \~ In Progress
+  * Global Scope \~ In Progress
+    * Serializable to file
+* Working Directives
+  * Base parsing/matching \~ Complete
+  * Accessing & Modifying Scope
+    * Global
+    * Local
+  * Conditionals
+* Standard (Built-in directives):
+  1. define -> Define Locally-Scoped variable \~ In-Progress
+  2. define-global -> define Globally-Scope variables
+  3. global -> Include JSON Object in global scope
+  4. if/ifdef/ifndef -> basic conditionals
+* User-Defined Directives
+
+Which I'll need to complete before I even consider publishing this package to NPM. For now the repo is private on my GitHub, though I'll be making it private very shortly. You can find the repo here:
+
+[Directive.js](https://github.com/joeyhops/directive.js "Directive.js")
+
+Check back soon for more updates - I'd like to start a running DevLog for this project, though my follow through always leaves something to be desired. I'll make sure to post at least a short blog post when the repo goes public though, if not something more. I've got a lot of ideas for this project, I think it could definitely be something at least slightly useful, so if you want to follow the development of Directive.js, offer feedback, tips, support, complaints, or anything really please don't hesitate to email me at me(at)joeyhops.com
+
+You can also [follow me on GitHub](https://github.com/joeyhops "Follow me on github") if you want to keep an eye on my open source projects.
