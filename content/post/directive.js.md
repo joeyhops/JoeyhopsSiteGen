@@ -109,7 +109,7 @@ Currently, I have a few things on my TODO list that I consider "MVP" for Directi
   4. if/ifdef/ifndef -> basic conditionals
 * User-Defined Directives
 
-Which I'll need to complete before I even consider publishing this package to NPM. For now the repo is private on my GitHub, though I'll be making it private very shortly. You can find the repo here:
+Which I'll need to complete before I even consider publishing this package to NPM. For now the repo is private on my GitHub, though I'll be making it public very shortly. You can find the repo here:
 
 [Directive.js](https://github.com/joeyhops/directive.js "Directive.js")
 
