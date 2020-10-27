@@ -2,7 +2,6 @@
 categories = ["Directive.js", "Programming"]
 date = 2020-10-27T19:42:00Z
 description = "Directive.js Introduction"
-draft = true
 tags = ["javascript", "side-project", "preprocessor", "typescript", "js", "directive"]
 title = "Introducing Directive.js"
 
