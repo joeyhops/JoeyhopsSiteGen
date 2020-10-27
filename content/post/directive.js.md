@@ -27,12 +27,12 @@ The idea is simple, before any other compilation/transformation steps are run on
 
 Example:
 
-    //# define EXAMPLE_VAR "My Example Var"
+    //# define EXAMPLE"My Example Var"
 
-The above would "DEFINE" the identifier "EXAMPLE_VAR" with the value "My Example Var" which can then be used by other directives for the use of source management, environment management, conditional compilation, and more. An example of this would be:
+The above would "DEFINE" the identifier "EXAMPLE" with the value "My Example Var" which can then be used by other directives for the use of source management, environment management, conditional compilation, and more. An example of this would be:
 
-    //# ifdef EXAMPLE_VAR
+    //# ifdef EXAMPLE
     *SOURCE CODE HERE*
     //# endif
 
-Combined with the above directive (assuming the scope is correct, more on that later), the preprocessor would check to see if the identifier "EXAMPLE_VAR_"_ has a _defined_ value. If it does, the preprocessor will transform the source code to ensure the code **BELOW** the conditional directive (_ifdef_ in this example) **UP TO** the end directive (_endif_ in this example) is **INCLUDED** in the transformed file. Otherwise, if the condition is FALSE (EXAMPLE___VAR is 
+Combined with the above directive (assuming the scope is correct, more on that later), the preprocessor would check to see if the identifier "EXAMPLE" has a defined value. If it does, the preprocessor will transform the source code to ensure the code BELOW the conditional directive (ifdef in this example) UP TO the end directive (endif in this example) is INCLUDED in the transformed file. Otherwise, if the condition is FALSE (EXAMPLE is undefined)
