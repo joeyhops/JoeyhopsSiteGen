@@ -20,4 +20,5 @@ fields:
 pages:
 - content/post/directive.js.md
 - content/post/the-vscode-rant.md
+- content/post/writing-a-database-introduction.md
 - content/showcase.md
